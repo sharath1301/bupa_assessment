@@ -1,5 +1,5 @@
 <div class="p-4">
-    <div class="bg-blue-500 text-white p-4">{{title()}}</div>
+    <div class="bg-brand text-white p-4">{{title()}}</div>
     @for (book of booksOwned().filter((book) => !this.hardcoverOnly() || book.type === 'Hardcover'); track book.name)
     {
     <p>{{book.name}}</p>

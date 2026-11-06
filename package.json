@@ -1,0 +1,12 @@
+{
+  "name": "bupa-assessment-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start:api": "npm start --prefix bupa_assessment_api",
+    "start:ui": "npm start --prefix bupa_assessment_ui",
+    "dev": "concurrently -n \"API,UI\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run start:api\" \"npm run start:ui\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
