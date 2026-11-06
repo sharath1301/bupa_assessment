@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bupa assessment</title>
+</head>
+
+<body class="m-4">
+  <div class="border border-blue-500 p-4">
+    <div class="border bg-blue-500 text-white p-4">Owners and Books</div>
+    @if(booksByOwner()){
+    <div class="flex flex-col sm:flex-row gap-2 m-auto w-fit">
+      <books-owned [booksOwned]="booksOfAdults()" [title]="'Books owned by adults'" [hardcoverOnly]="hardcoverOnly()"></books-owned>
+      <books-owned [booksOwned]="booksOfChildren()" [title]="'Books owned by children'" [hardcoverOnly]="hardcoverOnly()"></books-owned>
+    </div>
+    }
+    <hr class="m-4" />
+    <div class="flex flex-col sm:flex-row gap-2 mt-4">
+      <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" (click)="hardCoverOnly()">Hard Cover</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="getBooks()">Get Books</button>
+    </div>
+  </div>
+</body>
+
+</html>
